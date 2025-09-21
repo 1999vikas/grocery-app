@@ -37,6 +37,7 @@ import mushrooms from "@/assets/images/mushrooms.png";
 import onionRings from "@/assets/images/onion-rings.png";
 import onions from "@/assets/images/onions.png";
 import pizzaOne from "@/assets/images/pizza-one.png";
+import pizzas from "@/assets/images/pizzas.png";
 import salad from "@/assets/images/salad.png";
 import success from "@/assets/images/success.png";
 import tomatoes from "@/assets/images/tomatoes.png";
@@ -158,6 +159,7 @@ export const toppings = [
 ];
 
 export const images = {
+    pizzas,
     avatar,
     avocado,
     bacon,

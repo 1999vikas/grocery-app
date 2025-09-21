@@ -1,15 +1,21 @@
+import { images } from '@/constants'
 import { Slot } from 'expo-router'
-import { Text, View } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Dimensions, Image, ImageBackground, KeyboardAvoidingView, Platform, ScrollView, View } from 'react-native'
 
 const AuthLayout = () => {
   return (
-    <SafeAreaView>
-    <View>
-      <Text>AuthLayout</Text>
-      <Slot/>
-    </View>
-    </SafeAreaView>
+    <KeyboardAvoidingView className='bg-white' behavior={Platform.OS=='ios' ? 'padding':'height'}>
+      <ScrollView className='bg-white h-full' keyboardShouldPersistTaps="handled">
+        <View className='w-full relative' style={{height:Dimensions.get("screen").height/2.5}}>
+        <ImageBackground source={images.loginGraphic} resizeMode='stretch' className='size-full '/>
+        <Image source={images.logo} className='self-center size-48 -bottom-16 absolute' />
+
+        </View>
+          <Slot/>
+      </ScrollView>
+      
+    
+    </KeyboardAvoidingView>
   )
 }
 
